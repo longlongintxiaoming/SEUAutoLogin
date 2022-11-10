@@ -156,6 +156,8 @@ if __name__ == '__main__':
 
     today = datetime.datetime.now(pytz.timezone('Asia/Shanghai'))
     print(today)
+    
+    args.force = True
     if today.hour >= 15:  # 超过填报时间
         if args.force:
             print("【超过填报时间，但继续填报】")
