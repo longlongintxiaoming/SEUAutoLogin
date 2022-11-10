@@ -157,13 +157,13 @@ if __name__ == '__main__':
     today = datetime.datetime.now(pytz.timezone('Asia/Shanghai'))
     print(today)
     
-    args.force = True
-    if today.hour >= 15:  # 超过填报时间
-        if args.force:
-            print("【超过填报时间，但继续填报】")
-        else:
-            print("【超过填报时间！放弃填报】")
-            exit()
+#     args.force = True
+#     if today.hour >= 15:  # 超过填报时间
+#         if args.force:
+#             print("【超过填报时间，但继续填报】")
+#         else:
+#             print("【超过填报时间！放弃填报】")
+#             exit()
     ss = login(configs['user']['cardnum'], configs['user']['password'])
     if ss:
         doReport(ss, args.config)
